@@ -19,5 +19,10 @@ public class PrimaryController {
         App.setRoot("secondary");
     }
     
+    @FXML
+    private void switchToCalc() throws IOException {
+        App.setRoot("calc");
+    }
+    
 }
 
