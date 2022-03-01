@@ -18,50 +18,45 @@ public class calController {
     @FXML
     private TextField output;
     
+    private double one;
+    private double two;
+   
+    
     @FXML
     public void add() {
-        String first = input1.getText();
-        String second = input2.getText();
+        this.getInput();
         
-        double one = Double.parseDouble(first);
-        double two = Double.parseDouble(second);
-        
-        output.setText(Double.toString(one+two));
+        output.setText(Double.toString(this.one+this.two));
     }
     
     @FXML
     public void multiply() {
-        String first = input1.getText();
-        String second = input2.getText();
+        this.getInput();
         
-        double one = Double.parseDouble(first);
-        double two = Double.parseDouble(second);
-        
-        output.setText(Double.toString(one*two));
-        
+        output.setText(Double.toString(this.one*this.two));
     } 
     
     @FXML
     public void subtract() {
-        String first = input1.getText();
-        String second = input2.getText();
+        this.getInput();
         
-        double one = Double.parseDouble(first);
-        double two = Double.parseDouble(second);
-        
-        output.setText(Double.toString(one-two));
+        output.setText(Double.toString(this.one-this.two));
     }
     
     @FXML
     public void divide() {
+        this.getInput();
+        
+        output.setText(Double.toString(this.one/this.two));
+        
+    }
+    
+    private void getInput() {
         String first = input1.getText();
         String second = input2.getText();
         
-        double one = Double.parseDouble(first);
-        double two = Double.parseDouble(second);
-        
-        output.setText(Double.toString(one/two));
-        
+        this.one = Double.parseDouble(first);
+        this.two = Double.parseDouble(second);
     }
    
 }
